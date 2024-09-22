@@ -234,14 +234,14 @@ def numerical_feature(
             y=target,
             orient="h",
             ax=ax[1],
-            palette=palette,
+            palette="coolwarm",
             hue=target,
             legend=False, saturation=0.8
         )
         ax[1].set_title(f"Box Plot of '{feature}' by '{target}'")
         ax[1].set_ylabel(target)
     else:
-        sns.boxplot(data=df, x=feature, orient="h", ax=ax[1], palette=palette)
+        sns.boxplot(data=df, x=feature, orient="h", ax=ax[1], palette="coolwarm")
         ax[1].set_title(f"Box Plot of '{feature}'")
         ax[1].set_ylabel("")
 
